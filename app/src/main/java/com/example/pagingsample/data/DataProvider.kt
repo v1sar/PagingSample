@@ -17,40 +17,40 @@ object DataProvider {
 
     private val listWithData = listOf(
         FilmModel(
-            title = "Film1",
-            subtitle = "Awesome film"
+            title = "Star Wars: Android Academy Strikes back",
+            subtitle = "Awesome classic"
         ),
         FilmModel(
-            title = "Film2",
-            subtitle = "Awesome film"
+            title = "The Lord of the Androids: The Return of the AsyncTask",
+            subtitle = "Horror (21+)"
         ),
         FilmModel(
-            title = "Film3",
-            subtitle = "Awesome film"
+            title = "The Dark Knight",
+            subtitle = "Story about lovely dark theme"
         ),
         FilmModel(
-            title = "Film4",
-            subtitle = "Awesome film"
+            title = "Fight Clubdroid",
+            subtitle = "An insomniac android developer and a devil-may-care soapmaker"
         ),
         FilmModel(
-            title = "Film5",
-            subtitle = "Awesome film"
+            title = "The Android Redemption",
+            subtitle = "Two imprisoned androids bond over a number of years"
         ),
         FilmModel(
-            title = "Film6",
-            subtitle = "Awesome film"
+            title = "Inception",
+            subtitle = "How to fall into Doze mode inside Doze mode"
         ),
         FilmModel(
-            title = "Film7",
-            subtitle = "Awesome film"
+            title = "Interstellar",
+            subtitle = "Heading to the planet where seconds count as years - good place to wait for Gradle build"
         ),
         FilmModel(
-            title = "Film8",
-            subtitle = "Awesome film"
+            title = "Pulp Fictiondroid",
+            subtitle = "Story about how girl turned into Doze mode"
         ),
         FilmModel(
-            title = "Film9",
-            subtitle = "Awesome film"
+            title = "The Godfather III",
+            subtitle = "The early life and career of Android in 1930s New York City"
         ),
         FilmModel(
             title = "Film10",
