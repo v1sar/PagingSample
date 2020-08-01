@@ -8,6 +8,7 @@ import androidx.paging.PagingConfig
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pagingsample.adapter.BestAdapterEver
 import com.example.pagingsample.adapter.FilmPagingSource
+import com.example.pagingsample.adapterLoading.BestLoadingAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -19,7 +20,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        recyclerView.adapter = adapter
+
+        recyclerView.adapter = adapter.withLoadStateFooter(
+            footer = BestLoadingAdapter { adapter.retry() }
+        )
+
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val pagerFlow = Pager(

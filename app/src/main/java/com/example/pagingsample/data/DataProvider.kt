@@ -11,7 +11,7 @@ object DataProvider {
             delay(1500)
             listWithData.subList(
                 offset.coerceAtMost(listWithData.size),
-                (offset + size).coerceAtMost(listWithData.size)
+                (offset + size)
             )
         }
 

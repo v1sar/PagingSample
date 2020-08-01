@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PagingSample</string>
+    <string name="retry_button_text">Retry</string>
 </resources>
