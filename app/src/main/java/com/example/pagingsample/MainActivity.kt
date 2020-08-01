@@ -5,15 +5,16 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
-import androidx.paging.LoadState
-import androidx.paging.Pager
-import androidx.paging.PagingConfig
+import androidx.paging.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pagingsample.adapter.BestAdapterEver
 import com.example.pagingsample.adapter.FilmPagingSource
 import com.example.pagingsample.adapterLoading.BestLoadingAdapter
+import com.example.pagingsample.data.UiModel
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         adapter.addLoadStateListener { state ->
-            pb_initial_loading.visibility = if (state.source.refresh is LoadState.Loading) View.VISIBLE else View.INVISIBLE
+            pb_initial_loading.visibility =
+                if (state.source.refresh is LoadState.Loading) View.VISIBLE else View.INVISIBLE
         }
 
         recyclerView.adapter = adapter.withLoadStateFooter(
@@ -38,6 +40,22 @@ class MainActivity : AppCompatActivity() {
             config = PagingConfig(pageSize = 5, enablePlaceholders = false),
             pagingSourceFactory = { FilmPagingSource() }
         ).flow
+            .map { pagingData ->
+                pagingData.map { filmModel -> UiModel.FilmModelItem(filmModel) }
+            }
+            .map {
+                it.insertSeparators<UiModel.FilmModelItem, UiModel> { filmModelItem1, filmModelItem2 ->
+                    if (filmModelItem1 == null || filmModelItem2 == null) {
+                        return@insertSeparators null
+                    }
+
+                    if (filmModelItem2.filmModel.title.length > filmModelItem1.filmModel.title.length) {
+                        UiModel.DummySeparator("Length differs")
+                    } else {
+                        null
+                    }
+                }
+            }
 
         lifecycleScope.launch {
             pagerFlow.collect {

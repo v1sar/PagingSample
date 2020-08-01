@@ -8,6 +8,7 @@ object DataProvider {
 
     suspend fun getData(offset: Int, size: Int) =
         withContext(Dispatchers.Default) {
+            println("Get data called with offset: $offset and size: $size")
             delay(1500)
             listWithData.subList(
                 offset.coerceAtMost(listWithData.size),
