@@ -1,8 +1,11 @@
 package com.example.pagingsample
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
+import androidx.paging.LoadState
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,6 +23,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        adapter.addLoadStateListener { state ->
+            pb_initial_loading.visibility = if (state.source.refresh is LoadState.Loading) View.VISIBLE else View.INVISIBLE
+        }
 
         recyclerView.adapter = adapter.withLoadStateFooter(
             footer = BestLoadingAdapter { adapter.retry() }
