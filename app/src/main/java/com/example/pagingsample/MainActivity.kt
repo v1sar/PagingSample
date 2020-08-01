@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.*
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pagingsample.adapter.BestAdapterEver
 import com.example.pagingsample.adapter.FilmPagingSource
@@ -35,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         )
 
         recyclerView.layoutManager = LinearLayoutManager(this)
+        val decoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        recyclerView.addItemDecoration(decoration)
 
         val pagerFlow = Pager(
             config = PagingConfig(pageSize = 5, enablePlaceholders = false),
