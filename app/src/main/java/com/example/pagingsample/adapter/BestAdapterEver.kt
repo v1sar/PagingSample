@@ -4,13 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.paging.PagedListAdapter
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pagingsample.R
 import com.example.pagingsample.data.FilmModel
 
-class BestAdapterEver : PagedListAdapter<FilmModel, BestAdapterEver.UsualViewHolder>(DIFF_CALLBACK) {
+class BestAdapterEver : PagingDataAdapter<FilmModel, BestAdapterEver.UsualViewHolder>(DIFF_CALLBACK) {
 
     override fun onBindViewHolder(holder: UsualViewHolder, position: Int) {
         val film = getItem(position)

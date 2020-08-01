@@ -1,11 +1,19 @@
 package com.example.pagingsample.data
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.withContext
+
 object DataProvider {
 
-    fun getData(offset: Int, size: Int): List<FilmModel> {
-        Thread.sleep(1500)
-        return listWithData.subList(offset, (offset + size).coerceAtMost(listWithData.size))
-    }
+    suspend fun getData(offset: Int, size: Int) =
+        withContext(Dispatchers.Default) {
+            delay(1500)
+            listWithData.subList(
+                offset.coerceAtMost(listWithData.size),
+                (offset + size).coerceAtMost(listWithData.size)
+            )
+        }
 
     private val listWithData = listOf(
         FilmModel(
