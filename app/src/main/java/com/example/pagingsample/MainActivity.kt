@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     if (filmModelItem2.filmModel.title.length > filmModelItem1.filmModel.title.length) {
-                        UiModel.DummySeparator("Length differs")
+                        UiModel.DummySeparator("Title Length differs")
                     } else {
                         null
                     }
