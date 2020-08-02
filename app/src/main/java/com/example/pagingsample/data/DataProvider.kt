@@ -53,114 +53,114 @@ object DataProvider {
             subtitle = "The early life and career of Android in 1930s New York City"
         ),
         FilmModel(
-            title = "Film10",
+            title = "Android 10",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film11",
+            title = "Android 11",
             subtitle = "Awesome film"
         ), FilmModel(
-            title = "Film12",
+            title = "Android 12",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film13",
+            title = "Android 13",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film14",
+            title = "Android 14",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film15",
+            title = "Android 15",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film16",
+            title = "Android 16",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film17",
+            title = "Android 17",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film18",
+            title = "Android 18",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film19",
+            title = "Android 19",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film20",
+            title = "Android 20",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film21",
+            title = "Android 21",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film22",
+            title = "Android 22",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film23",
+            title = "Android 23",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film24",
+            title = "Android 24",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film25",
+            title = "Android 25",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film26",
+            title = "Android 26",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film27",
+            title = "Android 27",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film28",
+            title = "Android 28",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film29",
+            title = "Android 29",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film30",
+            title = "Android 30",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film31",
+            title = "Android 31",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film32",
+            title = "Android 32",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film33",
+            title = "Android 33",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film34",
+            title = "Android 34",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film35",
+            title = "Android 35",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film36",
+            title = "Android 36",
             subtitle = "Awesome film"
         ),
         FilmModel(
-            title = "Film37",
+            title = "Android 37",
             subtitle = "Awesome film"
         )
     )
