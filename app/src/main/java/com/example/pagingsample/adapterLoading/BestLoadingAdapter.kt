@@ -37,7 +37,7 @@ class BestLoadingAdapter(private val retry: () -> Unit) : LoadStateAdapter<BestL
             when (loadState) {
                 is LoadState.NotLoading -> {
                     progressBar.visibility = View.INVISIBLE
-                    retryButton.visibility = View.VISIBLE
+                    retryButton.visibility = View.INVISIBLE
                 }
                 LoadState.Loading -> {
                     progressBar.visibility = View.VISIBLE
